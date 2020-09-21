@@ -1,0 +1,6 @@
+/home/koly/Java/dev/java-docker/v1/users-rest-server/src/main/java/users/rest/server/entity/User.java
+/home/koly/Java/dev/java-docker/v1/users-rest-server/src/main/java/users/rest/server/dao/UserDao.java
+/home/koly/Java/dev/java-docker/v1/users-rest-server/src/main/java/users/rest/server/utils/HibernateSessionFactoryUtil.java
+/home/koly/Java/dev/java-docker/v1/users-rest-server/src/main/java/users/rest/server/RestApplication.java
+/home/koly/Java/dev/java-docker/v1/users-rest-server/src/main/java/users/rest/server/services/UserService.java
+/home/koly/Java/dev/java-docker/v1/users-rest-server/src/main/java/users/rest/server/controllers/UsersController.java

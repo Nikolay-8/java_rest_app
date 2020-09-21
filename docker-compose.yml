@@ -1,0 +1,42 @@
+version: "3"
+services:
+    server:
+      build: ./users-rest-server
+      ports:
+        - "8081:8080"
+    postgres:
+      image: postgres
+      container_name: postgres
+      environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+        - POSTGRES_DB=users_db
+      ports:
+        - 5000:5432
+      volumes:
+        - ./docker/volumes/postgres:/var/lib/postgresql/data
+      restart: always
+    nginx:
+      image: nginx:latest
+      ports:
+        - "8111:80"
+      volumes:
+        - ./hosts:/etc/nginx/conf.d
+        - ./www:/var/www
+        - ./logs:/var/log/nginx
+      links:
+        - php
+    mysql:
+        image: mysql
+        ports:
+          - "3307:3306"
+        volumes:
+          - ./mysql:/var/lib/mysql
+        environment:
+          MYSQL_ROOT_PASSWORD: root    
+    php:
+      build: ./images/php
+      links: 
+        - mysql
+      volumes:
+        - ./www:/var/www

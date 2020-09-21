@@ -1,0 +1,5 @@
+users/rest/server/controllers/UsersController.class
+users/rest/server/utils/HibernateSessionFactoryUtil.class
+users/rest/server/entity/User.class
+users/rest/server/services/UserService.class
+users/rest/server/dao/UserDao.class
